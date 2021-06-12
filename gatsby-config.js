@@ -5,6 +5,8 @@
  */
 
 module.exports = {
-  /* Your site config here */
-  plugins: [],
-}
+  flags: {
+    DEV_SSR: false,
+  },
+  plugins: ['gatsby-plugin-react-helmet'],
+};
