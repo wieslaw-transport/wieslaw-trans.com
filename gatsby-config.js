@@ -5,8 +5,11 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: 'Wiesław-Trans',
+  },
+  plugins: ['gatsby-plugin-react-helmet'],
   flags: {
     DEV_SSR: false,
   },
-  plugins: ['gatsby-plugin-react-helmet'],
 };

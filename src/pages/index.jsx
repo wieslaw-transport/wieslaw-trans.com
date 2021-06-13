@@ -3,8 +3,28 @@ import { Helmet } from 'react-helmet';
 import '../styles/index.css';
 
 import Navbar from '../components/navbar';
+import { graphql } from 'gatsby';
 
-export default function Home() {
+const links = [
+  {
+    text: 'Start',
+    to: '#start',
+  },
+  {
+    text: 'Usługi',
+    to: '#uslugi',
+  },
+  {
+    text: 'O nas',
+    to: '#o-nas',
+  },
+  {
+    text: 'Kontakt',
+    to: '#kontakt',
+  },
+];
+
+export default function Home({ data }) {
   return (
     <div>
       <Helmet htmlAttributes={{ lang: 'pl' }}>
@@ -15,8 +35,18 @@ export default function Home() {
           content="Usługi transportowe, przewóz osób autokarem, busem oraz samochodem osobowym. Wyjazdy krajowe i zagraniczne. Kontakt tel: 601 819 653. Adres email: wieslaw.trans@gmail.com, Matuszewski Wiesław."
         />
       </Helmet>
-      <Navbar />
+      <Navbar title={data.site.siteMetadata.title} links={links} />
       <h1>Hello world!</h1>
     </div>
   );
 }
+
+export const query = graphql`
+  query HomePageQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`;
