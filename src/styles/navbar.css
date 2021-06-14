@@ -1,10 +1,12 @@
 .navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
-  position: relative;
   justify-content: space-between;
   align-items: center;
   background-color: #333;
   color: white;
+  z-index: 1000;
 }
 
 .brand-title {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import '../styles/index.css';
+import { StaticImage } from 'gatsby-plugin-image';
 
 import Navbar from '../components/navbar';
 import { graphql } from 'gatsby';
@@ -36,7 +37,15 @@ export default function Home({ data }) {
         />
       </Helmet>
       <Navbar title={data.site.siteMetadata.title} links={links} />
-      <h1>Hello world!</h1>
+      <main>
+        <StaticImage
+          className="hero-image"
+          src="../images/hero.jpg"
+          alt="hero"
+          placeholder="blurred"
+          layout="fullWidth"
+        />
+      </main>
     </div>
   );
 }
