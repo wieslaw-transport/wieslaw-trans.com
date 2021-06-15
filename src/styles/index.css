@@ -9,8 +9,6 @@
 }
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -21,7 +19,30 @@ html {
 }
 
 body {
+  margin: 0;
   color: var(--primary-background);
   font-size: 16px;
   font-family: 'Lato', sans-serif;
+}
+
+main {
+  padding-top: 51px;
+}
+@media (max-width: 800px) {
+  main {
+    padding-top: 45px;
+  }
+}
+
+section {
+  padding: 50px 0;
+}
+
+h2 {
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
 }
