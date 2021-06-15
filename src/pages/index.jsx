@@ -64,6 +64,13 @@ export default function Home({ data }) {
             <p key={i}>{text}</p>
           ))}
         </section>
+
+        <StaticImage
+          src="../images/inside.jpg"
+          alt="inside"
+          placeholder="blurred"
+          layout="fullWidth"
+        />
       </main>
     </div>
   );
