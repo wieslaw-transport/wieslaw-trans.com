@@ -87,7 +87,7 @@ export default function Home({ data }) {
         />
       </Helmet>
       <Navbar title={data.site.siteMetadata.title} links={links} />
-      <main>
+      <main id="start">
         <StaticImage
           className="hero-image"
           src="../images/hero.jpg"
