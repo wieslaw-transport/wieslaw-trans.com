@@ -105,6 +105,13 @@ export default function Home({ data }) {
 
           <p>{services.additionalInfo}</p>
         </section>
+
+        <StaticImage
+          src="../images/distance.jpg"
+          alt="distance"
+          placeholder="blurred"
+          layout="fullWidth"
+        />
       </main>
     </div>
   );
