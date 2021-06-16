@@ -18,28 +18,6 @@ const aboutUs = {
   ],
 };
 
-const services = {
-  title: 'Oferujemy',
-  list: [
-    'Wyjazdy krajowe',
-    'Wyjazdy zagraniczne',
-    'Planowanie programu wycieczki',
-    'Wycieczki szkolne i pielgrzymki',
-    'Transfer (z) lub (na) lotnisko',
-    'Transfer (z) lub (do) hotelu',
-    'Imprezy okolicznościowe',
-    'Wieczory kawalerskie',
-    'Przewóz gości weselnych',
-    'Przewóz osób na konferencje, szkolenia, wyjazdy integracyjne',
-    'Mikrobus/samochód osobowy z kierowcą',
-    'Umowy okresowe',
-  ],
-  additionalInfo: `
-    Ceny wynajmu autokarów kalkulowane są w oparciu o czas wynajęcia autokaru, zaś w przypadku dłuższych
-    tras, przeliczane są na podstawie ilości przejechanych kilometrów. Kalkulację na konkretną trasę
-    przesyłamy zainteresowanym osobom na e-mail.`,
-};
-
 export default function Home({ data }) {
   return (
     <div>
@@ -74,18 +52,6 @@ export default function Home({ data }) {
           placeholder="blurred"
           layout="fullWidth"
         />
-
-        <section id="uslugi" className="container">
-          <h2>{services.title}</h2>
-
-          <ul>
-            {services.list.map((item, i) => (
-              <li key={i}>{item}</li>
-            ))}
-          </ul>
-
-          <p>{services.additionalInfo}</p>
-        </section>
 
         <StaticImage
           src="../images/distance.jpg"
