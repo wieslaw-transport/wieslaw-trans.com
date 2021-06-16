@@ -5,6 +5,11 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 import Navbar from '../components/navbar';
 import { graphql } from 'gatsby';
+import tw from 'twin.macro';
+
+const Button = tw.button`
+  bg-blue-500 hover:bg-blue-800 text-white p-2 rounded
+`;
 
 export default function Home({ data }) {
   return (
@@ -19,6 +24,7 @@ export default function Home({ data }) {
       </Helmet>
       <Navbar title={data.site.siteMetadata.title} />
       <main id="start">
+        <Button>Activate</Button>
         <StaticImage
           className="hero-image"
           src="../images/hero.jpg"
