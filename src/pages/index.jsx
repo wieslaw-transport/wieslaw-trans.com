@@ -6,18 +6,6 @@ import { StaticImage } from 'gatsby-plugin-image';
 import Navbar from '../components/navbar';
 import { graphql } from 'gatsby';
 
-const aboutUs = {
-  title: 'O nas',
-  paragraphs: [
-    'Jesteśmy na rynku przewozów autokarowych od 1993r. Firma oferuje usługę w najwyższym zakresie wynajmu busów i autobusów.',
-    'Kierowcy w naszej firmie to zawodowcy, którzy cechują się profesjonalizmem oraz wysoką kulturą osobistą.',
-    'Specjalizujemy się w krajowym i międzynarodowym przewozie osób, posiadamy wszelkie niezbędne certyfikaty oraz licencje do przewozu osób w kraju i poza jego granicami.',
-    'Posiadamy autokary najwyższej klasy. Dbamy o to aby autokar był zawsze czysty i zadbany. Autokary posiadają wszelkie udogodnienia oraz wyposażone są nowoczesne akcesoria tj.: klimatyzację, lodówkę, barek, DVD/TV, wygodne fotele z pasami bezpieczeństwa, itd.',
-    'Gwarantujemy wysoką jakość usług, miłą atmosferę oraz niską cenę wynajmu autokarów i busów.',
-    'Jeżeli jeszcze nie mieliśmy przyjemności świadczyć dla Was usług, sprawdź naszą ofertę i napisz do nas.',
-  ],
-};
-
 export default function Home({ data }) {
   return (
     <div>
@@ -38,13 +26,6 @@ export default function Home({ data }) {
           placeholder="blurred"
           layout="fullWidth"
         />
-
-        <section id="o-nas" className="container">
-          <h2>{aboutUs.title}</h2>
-          {aboutUs.paragraphs.map((text, i) => (
-            <p key={i}>{text}</p>
-          ))}
-        </section>
 
         <StaticImage
           src="../images/inside.jpg"

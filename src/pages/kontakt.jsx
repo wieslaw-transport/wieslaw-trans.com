@@ -21,7 +21,7 @@ const content = {
   },
 };
 
-export default function Kontakt({ data }) {
+export default function Contact({ data }) {
   return (
     <Layout>
       <Helmet htmlAttributes={{ lang: 'pl' }}>
@@ -57,7 +57,7 @@ export default function Kontakt({ data }) {
 }
 
 export const query = graphql`
-  query KontaktQuery {
+  query ContactQuery {
     site {
       siteMetadata {
         title

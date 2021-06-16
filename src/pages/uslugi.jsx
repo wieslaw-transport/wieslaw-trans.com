@@ -27,11 +27,11 @@ const content = {
     przesyłamy zainteresowanym osobom na e-mail.`,
 };
 
-export default function Kontakt({ data }) {
+export default function Services({ data }) {
   return (
     <Layout>
       <Helmet htmlAttributes={{ lang: 'pl' }}>
-        <title>Kontakt | {data.site.siteMetadata.title}</title>
+        <title>Uslugi | {data.site.siteMetadata.title}</title>
         <meta charSet="utf-8" />
         <meta
           name="description"
@@ -54,7 +54,7 @@ export default function Kontakt({ data }) {
 }
 
 export const query = graphql`
-  query KontaktQuery {
+  query ServicesQuery {
     site {
       siteMetadata {
         title
