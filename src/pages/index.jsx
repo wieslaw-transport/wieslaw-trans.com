@@ -6,25 +6,6 @@ import { StaticImage } from 'gatsby-plugin-image';
 import Navbar from '../components/navbar';
 import { graphql } from 'gatsby';
 
-const links = [
-  {
-    text: 'Start',
-    to: '#start',
-  },
-  {
-    text: 'Usługi',
-    to: '#uslugi',
-  },
-  {
-    text: 'O nas',
-    to: '#o-nas',
-  },
-  {
-    text: 'Kontakt',
-    to: '#kontakt',
-  },
-];
-
 const aboutUs = {
   title: 'O nas',
   paragraphs: [
@@ -59,22 +40,6 @@ const services = {
     przesyłamy zainteresowanym osobom na e-mail.`,
 };
 
-const contact = {
-  header: {
-    title: 'Kontakt',
-    paragraph:
-      'Z przyjemnością odpowiemy na wszelkie pytania dotyczące naszej oferty transportu autokarowego.',
-  },
-  mobile: {
-    title: 'Zadzwoń',
-    paragraphs: ['tel: 601 819 653', 'pon-pt 8:00 - 20:00'],
-  },
-  email: {
-    title: 'Wyślij maila',
-    paragraphs: ['email: wieslaw.trans@gmail.com'],
-  },
-};
-
 export default function Home({ data }) {
   return (
     <div>
@@ -86,7 +51,7 @@ export default function Home({ data }) {
           content="Usługi transportowe, przewóz osób autokarem, busem oraz samochodem osobowym. Wyjazdy krajowe i zagraniczne. Kontakt tel: 601 819 653. Adres email: wieslaw.trans@gmail.com, Matuszewski Wiesław."
         />
       </Helmet>
-      <Navbar title={data.site.siteMetadata.title} links={links} />
+      <Navbar title={data.site.siteMetadata.title} />
       <main id="start">
         <StaticImage
           className="hero-image"
@@ -128,27 +93,6 @@ export default function Home({ data }) {
           placeholder="blurred"
           layout="fullWidth"
         />
-
-        <section id="kontakt" className="container">
-          <header>
-            <h2>{contact.header.title}</h2>
-            <p>{contact.header.paragraph}</p>
-          </header>
-
-          <div>
-            <h3>{contact.mobile.title}</h3>
-            {contact.mobile.paragraphs.map((para, i) => (
-              <p key={i}>{para}</p>
-            ))}
-          </div>
-
-          <div>
-            <h3>{contact.email.title}</h3>
-            {contact.email.paragraphs.map((para, i) => (
-              <p key={i}>{para}</p>
-            ))}
-          </div>
-        </section>
       </main>
     </div>
   );

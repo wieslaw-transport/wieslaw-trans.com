@@ -1,17 +1,30 @@
 import React from 'react';
 import '../styles/navbar.css';
 
-type Link = {
-  to: string;
-  text: string;
-};
-
 type Props = {
   title: string;
-  links: Link[];
 };
 
-export default function Navbar({ title, links }: Props) {
+const links = [
+  {
+    text: 'Start',
+    to: '/',
+  },
+  {
+    text: 'Usługi',
+    to: 'uslugi',
+  },
+  {
+    text: 'O nas',
+    to: 'o-nas',
+  },
+  {
+    text: 'Kontakt',
+    to: 'kontakt',
+  },
+];
+
+export default function Navbar({ title }: Props) {
   const [isMenuVisible, setIsMenuVisible] = React.useState(false);
   const hideMenu = () => setIsMenuVisible(false);
   const toggleMenuVisibility = () => setIsMenuVisible(prev => !prev);
