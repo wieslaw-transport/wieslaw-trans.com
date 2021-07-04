@@ -7,7 +7,7 @@ module.exports = {
         display: 'Montserrat',
       },
       letterSpacing: {
-        extreme: '1em',
+        3.5: '0.875rem', // Analogically to margin and padding
       },
     },
   },

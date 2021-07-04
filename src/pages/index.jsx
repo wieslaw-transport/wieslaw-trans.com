@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { StaticImage } from 'gatsby-plugin-image';
 
 export default function Home() {
   return (
@@ -19,22 +20,31 @@ export default function Home() {
             <span className="font-display font-black border-b-4 border-gray-900">WiesławTrans</span>
           </a>
 
-          <nav className="absolute flex w-full justify-center">
-            <a className="font-medium uppercase text-sm px-5 opacity-60 hover:opacity-95" href="/">
+          <nav className="absolute flex w-full justify-center font-medium uppercase text-sm">
+            <a className="px-5 opacity-60 hover:opacity-95" href="/">
               start
             </a>
-            <a className="font-medium uppercase text-sm px-5 opacity-60 hover:opacity-95" href="/">
+            <a className="px-5 opacity-60 hover:opacity-95" href="/">
               o nas
             </a>
-            <a className="font-medium uppercase text-sm px-5 opacity-60 hover:opacity-95" href="/">
+            <a className="px-5 opacity-60 hover:opacity-95" href="/">
               usługi
             </a>
-            <a className="font-medium uppercase text-sm px-5 opacity-60 hover:opacity-95" href="/">
+            <a className="px-5 opacity-60 hover:opacity-95" href="/">
               kontakt
             </a>
           </nav>
         </div>
       </div>
+
+      <section className="relative mx-8">
+        <StaticImage src="../images/hero.png" alt="Autokar marki Mercedes na tle kościoła" />
+
+        <div className="absolute top-12 left-12 text-center font-display font-bold text-white">
+          <div className="text-6xl leading-snug">Wiesław Transport</div>
+          <div className="text-2xl uppercase tracking-3.5 -mr-3.5">Usługi Transportowe</div>
+        </div>
+      </section>
     </div>
   );
 }
