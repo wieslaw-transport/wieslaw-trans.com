@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import '../styles/index.css';
 
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
@@ -8,8 +7,7 @@ import Layout from '../components/layout';
 const content = {
   header: {
     title: 'Kontakt',
-    paragraph:
-      'Z przyjemnością odpowiemy na wszelkie pytania dotyczące naszej oferty transportu autokarowego.',
+    paragraph: 'Z przyjemnością odpowiemy na wszelkie pytania dotyczące naszej oferty transportu autokarowego.',
   },
   mobile: {
     title: 'Zadzwoń',
