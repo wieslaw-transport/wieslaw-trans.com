@@ -16,8 +16,8 @@ export default function Home() {
         />
       </Helmet>
 
-      <div id="navigation" className="px-12 py-8">
-        <div className="flex flex-grow relative">
+      <div id="navigation" className="px-8 lg:px-12 py-8">
+        <div className="flex flex-grow items-center relative">
           <a href="/">
             <span className="font-display font-black border-b-4 border-gray-900">WiesławTrans</span>
           </a>
@@ -39,13 +39,13 @@ export default function Home() {
         </div>
       </div>
 
-      <main className="grid  gap-y-24 px-12 mb-12">
-        <section id="hero-section" className="relative">
+      <main className="grid  gap-y-24 px-8 lg:px-12 mb-12">
+        <section id="hero-section" className="hero-section relative">
           <StaticImage src="../images/hero.png" alt="Autokar marki Mercedes na tle kościoła" />
 
-          <div className="absolute top-12 left-12 text-center font-display font-bold text-white">
-            <div className="text-6xl leading-snug">Wiesław Transport</div>
-            <div className="text-2xl uppercase tracking-3.5 -mr-3.5">Usługi Transportowe</div>
+          <div className="title-box absolute text-center font-display font-bold text-white">
+            <div className="primary-text leading-snug">Wiesław Transport</div>
+            <div className="secondary-text uppercase">Usługi Transportowe</div>
           </div>
         </section>
 
@@ -55,9 +55,9 @@ export default function Home() {
             <h2 className="text-4xl">Kim jesteśmy?</h2>
           </div>
 
-          <div className="max-w-screen-lg mx-auto grid grid-cols-3 gap-4">
+          <div className="max-w-screen-lg mx-auto grid lg:grid-cols-3 gap-4">
             <div className="p-4">
-              <FaMapMarkedAlt className="w-16 h-16 text-gray-900 mb-4" />
+              <FaMapMarkedAlt className="w-16 h-16 text-gray-900 mb-4 mx-auto" />
               <p className="text-justify">
                 Jesteśmy na rynku przewozów autokarowych od 1993r. Specjalizujemy się w krajowym i międzynarodowym przewozie osób, posiadamy wszelkie niezbędne certyfikaty oraz
                 licencje do przewozu osób w kraju i poza jego granicami.{' '}
@@ -65,7 +65,7 @@ export default function Home() {
             </div>
 
             <div className="p-4">
-              <FaBusAlt className="w-16 h-16 text-gray-900 mb-4" />
+              <FaBusAlt className="w-16 h-16 text-gray-900 mb-4 mx-auto" />
               <p className="text-justify">
                 Posiadamy autokary najwyższej klasy i dbamy o to aby były one zawsze czyste i zadbane. Autokary posiadają wszelkie udogodnienia oraz wyposażone są nowoczesne
                 akcesoria tj. klimatyzację, lodówkę, barek, DVD/TV, wygodne fotele z pasami bezpieczeństwa, itd.{' '}
@@ -73,7 +73,7 @@ export default function Home() {
             </div>
 
             <div className="p-4">
-              <FaTrophy className="w-16 h-16 text-gray-900 mb-4" />
+              <FaTrophy className="w-16 h-16 text-gray-900 mb-4 mx-auto" />
               <p className="text-justify">
                 Jesteśmy na rynku przewozów autokarowych od 1993r. Specjalizujemy się w krajowym i międzynarodowym przewozie osób, posiadamy wszelkie niezbędne certyfikaty oraz
                 licencje do przewozu osób w kraju i poza jego granicami.{' '}
@@ -93,8 +93,8 @@ export default function Home() {
               <h2 className="text-4xl">Nasza oferta</h2>
             </div>
 
-            <div className="flex mb-12">
-              <ul className="px-8">
+            <div className="flex flex-grow justify-between mb-12">
+              <ul className="lg:px-8">
                 {col1.map(text => (
                   <li key={text} className="flex items-center mb-4">
                     <FaRegCheckCircle className="w-6 h-6 text-green-500 mr-4" />
@@ -102,7 +102,7 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <ul className="px-8">
+              <ul className="lg:px-8">
                 {col2.map(text => (
                   <li key={text} className="flex items-center mb-4">
                     <FaRegCheckCircle className="w-6 h-6 text-green-500 mr-4" />
