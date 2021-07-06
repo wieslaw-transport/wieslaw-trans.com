@@ -17,7 +17,7 @@ export default function Home() {
       </Helmet>
 
       <div id="navigation" className="px-12 py-8">
-        <div className="flex flex-grow relative">
+        <div className="flex flex-grow items-center relative">
           <a href="/">
             <span className="font-display font-black border-b-4 border-gray-900">WiesławTrans</span>
           </a>
@@ -40,12 +40,12 @@ export default function Home() {
       </div>
 
       <main className="grid  gap-y-24 px-12 mb-12">
-        <section id="hero-section" className="relative">
+        <section id="hero-section" className="hero-section relative">
           <StaticImage src="../images/hero.png" alt="Autokar marki Mercedes na tle kościoła" />
 
-          <div className="absolute top-12 left-12 text-center font-display font-bold text-white">
-            <div className="text-6xl leading-snug">Wiesław Transport</div>
-            <div className="text-2xl uppercase tracking-3.5 -mr-3.5">Usługi Transportowe</div>
+          <div className="title-box absolute text-center font-display font-bold text-white">
+            <div className="primary-text leading-snug">Wiesław Transport</div>
+            <div className="secondary-text uppercase">Usługi Transportowe</div>
           </div>
         </section>
 
