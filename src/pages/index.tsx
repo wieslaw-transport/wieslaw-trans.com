@@ -20,10 +20,10 @@ export default function Home() {
       <Navigation />
 
       <main id="start" className="grid gap-y-24 px-4 md:px-8 mb-12 pt-16 md:pt-28">
-        <section className="relative">
+        <section className="relative hero-section">
           <StaticImage src="../images/hero.png" alt="Autokar marki Mercedes na tle kościoła" />
 
-          <div className="title-box absolute text-center font-display font-bold text-white">
+          <div className="hidden sm:block title-box absolute text-center font-display font-bold text-white">
             <div className="primary-text leading-snug">Wiesław Transport</div>
             <div className="secondary-text uppercase">Usługi Transportowe</div>
           </div>
