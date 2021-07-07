@@ -1,0 +1,15 @@
+.hero-section .title-box {
+  top: 3vw;
+  left: 3vw;
+}
+
+.hero-section .title-box .primary-text {
+  font-size: 4.5vw;
+  line-height: 1;
+}
+
+.hero-section .title-box .secondary-text {
+  font-size: 2vw;
+  letter-spacing: 1vw;
+  margin-right: -1vw;  /* To negate thge letter spacing effect on last letter */
+}
