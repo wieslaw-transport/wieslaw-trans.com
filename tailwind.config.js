@@ -9,6 +9,9 @@ module.exports = {
       letterSpacing: {
         3.5: '0.875rem', // Analogically to margin and padding
       },
+      width: {
+        inherit: 'inherit',
+      },
     },
   },
   variants: {
