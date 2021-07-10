@@ -1,10 +1,34 @@
 import React from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { clsx } from '../utils/strings';
 
 export default function Navbar() {
+  const [isScrolledDown, setIsScrolledDown] = React.useState(false);
+
+  React.useEffect(() => {
+    const onScroll = () => {
+      if (
+        document.body.scrollTop > 0 ||
+        document.documentElement.scrollTop > 0
+      ) {
+        setIsScrolledDown(true);
+      } else {
+        setIsScrolledDown(false);
+      }
+    };
+    window.addEventListener('scroll', onScroll);
+
+    return () => window.removeEventListener('scroll', onScroll);
+  });
+
   return (
-    <Popover className="z-50 fixed w-inherit bg-white">
+    <Popover
+      className={clsx(
+        'z-50 fixed w-inherit bg-white',
+        isScrolledDown && 'shadow-md',
+      )}
+    >
       {({ open }) => (
         <>
           <div className="p-4 sm:px-8 md:p-8 flex justify-between items-center">
