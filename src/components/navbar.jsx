@@ -2,6 +2,7 @@ import React from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { clsx } from '../utils/strings';
+import theme from '../config/theme';
 
 export default function Navbar() {
   const [isScrolledDown, setIsScrolledDown] = React.useState(false);
@@ -56,7 +57,12 @@ export default function Navbar() {
             </Popover.Group>
 
             <div className="hidden md:flex items-center justify-end">
-              <FilledNavLink to="#kontakt">kontakt</FilledNavLink>
+              <Link
+                className={`btn-filled bg-${theme.primary}-600 hover:bg-${theme.primary}-700`}
+                to="#kontakt"
+              >
+                kontakt
+              </Link>
             </div>
           </div>
 
@@ -80,7 +86,12 @@ export default function Navbar() {
                   <NavLink to="#start">start</NavLink>
                   <NavLink to="#o-nas">o nas</NavLink>
                   <NavLink to="#uslugi">usługi</NavLink>
-                  <FilledNavLink to="#kontakt">kontakt</FilledNavLink>
+                  <Link
+                    className={`btn-filled bg-${theme.primary}-600 hover:bg-${theme.primary}-700`}
+                    to="#kontakt"
+                  >
+                    kontakt
+                  </Link>
                 </nav>
               </div>
             </Popover.Panel>
@@ -112,16 +123,9 @@ const NavLink = props => (
   />
 );
 
-const FilledNavLink = props => (
-  <Link
-    className="px-4 py-2 border border-transparent rounded-md shadow-sm text-center text-base capitalize font-medium text-white bg-indigo-600 hover:bg-indigo-700"
-    {...props}
-  />
-);
-
 const IconButton = ({ srLabel, Icon, ...props }) => (
   <Popover.Button
-    className="bg-white rounded-md px-2 py-1 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+    className="bg-white rounded-md px-2 py-1 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
     {...props}
   >
     <span className="sr-only">{srLabel}</span>

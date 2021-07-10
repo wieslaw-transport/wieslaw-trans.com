@@ -79,7 +79,9 @@ export default function Contact() {
         </div>
 
         <div className="flex justify-center mt-6">
-          <button className="px-4 py-2 text-white transition-colors duration-200 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">
+          <button
+            className={`btn-filled bg-${theme.primary}-600 hover:bg-${theme.primary}-700`}
+          >
             Wyślij wiadomość
           </button>
         </div>
