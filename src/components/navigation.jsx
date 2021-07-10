@@ -12,7 +12,13 @@ export default function Navigation() {
               <Logo />
             </div>
 
-            <div className="-mr-2 -my-2 md:hidden">{open ? <IconButton srLabel="Close menu" Icon={FaTimes} /> : <IconButton srLabel="Open menu" Icon={FaBars} />}</div>
+            <div className="-mr-2 -my-2 md:hidden">
+              {open ? (
+                <IconButton srLabel="Close menu" Icon={FaTimes} />
+              ) : (
+                <IconButton srLabel="Open menu" Icon={FaBars} />
+              )}
+            </div>
 
             <Popover.Group as="nav" className="hidden md:flex space-x-10">
               <NavLink to="#start">start</NavLink>
@@ -35,7 +41,11 @@ export default function Navigation() {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-85"
           >
-            <Popover.Panel focus static className="transition transform origin-top md:hidden">
+            <Popover.Panel
+              focus
+              static
+              className="transition transform origin-top md:hidden"
+            >
               <div className="p-4 shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
                 <nav className="grid gap-y-4 text-center">
                   <NavLink to="#start">start</NavLink>
@@ -54,7 +64,9 @@ export default function Navigation() {
 
 const Logo = () => (
   <a href="/">
-    <span className="font-display font-black border-b-4 border-gray-900">WiesławTrans</span>
+    <span className="font-display font-black border-b-4 border-gray-900">
+      WiesławTrans
+    </span>
   </a>
 );
 
@@ -64,10 +76,18 @@ const Link = ({ to, children, ...props }) => (
   </a>
 );
 
-const NavLink = props => <Link className="uppercase font-medium text-sm opacity-60 hover:opacity-95" {...props} />;
+const NavLink = props => (
+  <Link
+    className="uppercase font-medium text-sm opacity-60 hover:opacity-95"
+    {...props}
+  />
+);
 
 const FilledNavLink = props => (
-  <Link className="px-4 py-2 border border-transparent rounded-md shadow-sm text-center text-base capitalize font-medium text-white bg-indigo-600 hover:bg-indigo-700" {...props} />
+  <Link
+    className="px-4 py-2 border border-transparent rounded-md shadow-sm text-center text-base capitalize font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+    {...props}
+  />
 );
 
 const IconButton = ({ srLabel, Icon, ...props }) => (

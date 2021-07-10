@@ -6,7 +6,9 @@ export default function Services() {
     <section id="services-section">
       <div className="max-w-screen-md mx-auto flex flex-col items-center">
         <div className="text-center font-display mb-12">
-          <label className="text-xs font-medium uppercase opacity-60 tracking-widest mb-2.5">Usługi</label>
+          <label className="text-xs font-medium uppercase opacity-60 tracking-widest mb-2.5">
+            Usługi
+          </label>
           <h2 className="text-4xl">Nasza oferta</h2>
         </div>
 
@@ -20,8 +22,10 @@ export default function Services() {
         </ul>
 
         <p>
-          Ceny wynajmu autokarów kalkulowane są w oparciu o czas wynajęcia autokaru, zaś w przypadku dłuższych tras, przeliczane są na podstawie ilości przejechanych kilometrów.
-          Kalkulację na konkretną trasę przesyłamy zainteresowanym osobom na e-mail.
+          Ceny wynajmu autokarów kalkulowane są w oparciu o czas wynajęcia
+          autokaru, zaś w przypadku dłuższych tras, przeliczane są na podstawie
+          ilości przejechanych kilometrów. Kalkulację na konkretną trasę
+          przesyłamy zainteresowanym osobom na e-mail.
         </p>
       </div>
     </section>
