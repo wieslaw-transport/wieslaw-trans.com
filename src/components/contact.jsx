@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelopeOpenText } from 'react-icons/fa';
+import theme from '../config/theme';
 import './contact.scss';
+
 const items = [
   {
     id: 1,
