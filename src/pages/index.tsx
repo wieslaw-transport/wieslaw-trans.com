@@ -40,7 +40,7 @@ export default function Home() {
               <FaMapMarkedAlt className="w-16 h-16 text-gray-900 mb-4 mx-auto" />
               <p className="text-justify">
                 Jesteśmy na rynku przewozów autokarowych od 1993r. Specjalizujemy się w krajowym i międzynarodowym przewozie osób, posiadamy wszelkie niezbędne certyfikaty oraz
-                licencje do przewozu osób w kraju i poza jego granicami.{' '}
+                licencje do przewozu osób w kraju i poza jego granicami.
               </p>
             </div>
 
@@ -48,15 +48,15 @@ export default function Home() {
               <FaBusAlt className="w-16 h-16 text-gray-900 mb-4 mx-auto" />
               <p className="text-justify">
                 Posiadamy autokary najwyższej klasy i dbamy o to aby były one zawsze czyste i zadbane. Autokary posiadają wszelkie udogodnienia oraz wyposażone są nowoczesne
-                akcesoria tj. klimatyzację, lodówkę, barek, DVD/TV, wygodne fotele z pasami bezpieczeństwa, itd.{' '}
+                akcesoria tj. klimatyzację, lodówkę, barek, DVD/TV, wygodne fotele z pasami bezpieczeństwa, itd.
               </p>
             </div>
 
             <div className="p-4">
               <FaTrophy className="w-16 h-16 text-gray-900 mb-4 mx-auto" />
               <p className="text-justify">
-                Jesteśmy na rynku przewozów autokarowych od 1993r. Specjalizujemy się w krajowym i międzynarodowym przewozie osób, posiadamy wszelkie niezbędne certyfikaty oraz
-                licencje do przewozu osób w kraju i poza jego granicami.{' '}
+                Kierowcy Kierowcy w naszej firmie to zawodowcy, którzy cechują się profesjonalizmem oraz wysoką kulturą osobistą. Gwarantujemy wysoką jakość usług, miłą atmosferę
+                oraz niską cenę wynajmu autokarów i busów. Jeżeli jeszcze nie mieliśmy przyjemności świadczyć dla Was usług, sprawdź naszą ofertę i napisz do nas.
               </p>
             </div>
           </div>
