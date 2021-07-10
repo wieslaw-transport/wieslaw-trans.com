@@ -1,10 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { StaticImage } from 'gatsby-plugin-image';
-import { FaRegCheckCircle } from 'react-icons/fa';
 
 import Navigation from '../components/navigation';
 import AboutUsSection from '../components/about-us';
+import Services from '../components/services';
 
 export default function Home() {
   return (
@@ -36,38 +36,7 @@ export default function Home() {
           <StaticImage src="../images/inside.jpg" alt="Wnętrze autokaru marki Mercedes" />
         </section>
 
-        <section id="services-section">
-          <div className="max-w-screen-md mx-auto flex flex-col items-center">
-            <div className="text-center font-display mb-12">
-              <label className="text-xs font-medium uppercase opacity-60 tracking-widest mb-2.5">Usługi</label>
-              <h2 className="text-4xl">Nasza oferta</h2>
-            </div>
-
-            <div className="flex flex-grow justify-between mb-12">
-              <ul className="lg:px-8">
-                {col1.map(text => (
-                  <li key={text} className="flex items-center mb-4">
-                    <FaRegCheckCircle className="w-6 h-6 text-green-500 mr-4" />
-                    <p>{text}</p>
-                  </li>
-                ))}
-              </ul>
-              <ul className="lg:px-8">
-                {col2.map(text => (
-                  <li key={text} className="flex items-center mb-4">
-                    <FaRegCheckCircle className="w-6 h-6 text-green-500 mr-4" />
-                    <p>{text}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <p>
-              Ceny wynajmu autokarów kalkulowane są w oparciu o czas wynajęcia autokaru, zaś w przypadku dłuższych tras, przeliczane są na podstawie ilości przejechanych
-              kilometrów. Kalkulację na konkretną trasę przesyłamy zainteresowanym osobom na e-mail.
-            </p>
-          </div>
-        </section>
+        <Services />
 
         <section id="distant-photo-section">
           <StaticImage src="../images/distance.jpg" alt="Autokar marki Mercedes na tle kościoła" />
@@ -156,6 +125,3 @@ export default function Home() {
     </div>
   );
 }
-
-const col1 = ['Wyjazdy krajowe i zagraniczne', 'Planowanie programu wycieczki', 'Wiecieczki szkolne i pielgrzymki', 'Transfer z/na lotnisko', 'Transfer z/do hotelu'];
-const col2 = ['Wieczory kawalerskie i panieńskie', 'Przewóz gości weselnych', 'Przewóz na konferencje i szkolenia', 'Mikrobus/samochód osobowy z kierowcą', 'Umowy okresowe'];
