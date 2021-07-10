@@ -2,7 +2,7 @@ import React from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
-export default function Navigation() {
+export default function Navbar() {
   return (
     <Popover className="z-50 fixed w-inherit bg-white">
       {({ open }) => (
