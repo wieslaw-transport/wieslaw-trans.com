@@ -46,12 +46,10 @@ export default function Home() {
         <ContactSection />
       </main>
 
-      <footer className="p-12">
-        <div className="flex items-center justify-between text-sm">
-          <span className="opacity-60">Wiesław Transport &copy; 2021</span>
-
+      <footer className="p-4 sm:p-8">
+        <div className="text-center text-sm">
           <span>
-            <span className="opacity-60">made by </span>
+            <span className="opacity-60">Wiesław Transport &copy; 2021 by </span>
             <a href="https://macieksitkowski.com" target="_blank" rel="noopener noreferrer">
               <span className="opacity-60 hover:opacity-95">macieksitkowski.com</span>
             </a>
