@@ -13,7 +13,7 @@ const msg = {
 function handler(event) {
   console.log(event);
 
-  sgMail
+  return sgMail
     .send(msg)
     .then(() => {
       console.log('Email sent');
