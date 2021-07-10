@@ -8,18 +8,26 @@ const items = [
     id: 1,
     Icon: FaMapMarkerAlt,
     text: 'Piaskowa 7, Pułtusk',
+    url: 'https://goo.gl/maps/UF4Q6mq3u2jdJVnM7',
   },
   {
     id: 2,
     Icon: FaPhoneAlt,
     text: '601 819 653',
+    url: 'tel:601-819-653',
   },
   {
     id: 3,
     Icon: FaEnvelopeOpenText,
     text: 'wieslaw.trans@gmail.com',
+    url: 'mailto:wieslaw.trans@gmail.com',
   },
 ];
+
+const externalLinkProps = {
+  target: '_blank',
+  rel: 'noreferrer',
+};
 
 export default function Contact() {
   return (
@@ -35,13 +43,14 @@ export default function Contact() {
       </div>
 
       <div className="contact-details-grid mb-12">
-        {items.map(({ id, Icon, text }) => (
+        {items.map(({ id, Icon, text, url }) => (
           <a
             key={id}
-            href="#"
-            className="grid-item text-gray-700 rounded-md dark:text-gray-200 hover:bg-blue-200 dark:hover:bg-blue-500"
+            href={url}
+            {...(url.startsWith('http') ? externalLinkProps : {})}
+            className={`grid-item w-full py-2 text-gray-700 rounded-md dark:text-gray-200 hover:bg-${theme.primary}-200 dark:hover:bg-${theme.primary}-500`}
           >
-            <Icon className="w-5 h-5" />
+            <Icon className={`w-5 h-5 text-${theme.primary}-600`} />
             <span className="">{text}</span>
           </a>
         ))}
