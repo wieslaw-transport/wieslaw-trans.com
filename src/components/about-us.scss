@@ -1,0 +1,18 @@
+.about-us {
+  .grid-item {
+    display: grid;
+    gap: 1rem;
+    justify-items: center;
+    
+    @screen sm {
+      grid-auto-flow: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    @screen lg {
+      grid-auto-flow: row;
+      grid-template-rows: repeat(2, max-content);
+    }
+  }
+}
