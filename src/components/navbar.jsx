@@ -31,7 +31,12 @@ export default function Navbar() {
     >
       {({ open }) => (
         <>
-          <div className="p-4 sm:px-8 md:p-8 flex justify-between items-center">
+          <div
+            className={clsx(
+              'px-4 py-4 sm:px-8 flex justify-between items-center transition-all',
+              isScrolledDown ? 'md:py-4' : 'md:py-8',
+            )}
+          >
             <div className="h-8 md:h-12 flex justify-center items-center">
               <Logo />
             </div>
