@@ -7,7 +7,7 @@ export default function Navigation() {
     <Popover className="z-50 fixed w-inherit bg-white">
       {({ open }) => (
         <>
-          <div className="p-4 md:p-8 flex justify-between items-center">
+          <div className="p-4 sm:px-8 md:p-8 flex justify-between items-center">
             <div className="h-8 md:h-12 flex justify-center items-center">
               <Logo />
             </div>

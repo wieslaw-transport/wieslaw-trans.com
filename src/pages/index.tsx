@@ -1,9 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { StaticImage } from 'gatsby-plugin-image';
-import { FaMapMarkedAlt, FaBusAlt, FaTrophy, FaRegCheckCircle } from 'react-icons/fa';
+import { FaRegCheckCircle } from 'react-icons/fa';
 
 import Navigation from '../components/navigation';
+import AboutUsSection from '../components/about-us';
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
 
       <Navigation />
 
-      <main id="start" className="grid gap-y-24 px-4 md:px-8 mb-12 pt-16 md:pt-28">
+      <main id="start" className="grid gap-y-12 sm:gap-y-24 px-4 sm:px-8 mb-12 pt-16 md:pt-28">
         <section className="relative hero-section">
           <StaticImage src="../images/hero.png" alt="Autokar marki Mercedes na tle kościoła" />
 
@@ -29,38 +30,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about-us-section">
-          <div className="text-center font-display mb-8">
-            <label className="text-xs font-medium uppercase opacity-60 tracking-widest mb-2.5">O nas</label>
-            <h2 className="text-4xl">Kim jesteśmy?</h2>
-          </div>
-
-          <div className="max-w-screen-lg mx-auto grid lg:grid-cols-3 gap-4">
-            <div className="p-4">
-              <FaMapMarkedAlt className="w-16 h-16 text-gray-900 mb-4 mx-auto" />
-              <p className="text-justify">
-                Jesteśmy na rynku przewozów autokarowych od 1993r. Specjalizujemy się w krajowym i międzynarodowym przewozie osób, posiadamy wszelkie niezbędne certyfikaty oraz
-                licencje do przewozu osób w kraju i poza jego granicami.
-              </p>
-            </div>
-
-            <div className="p-4">
-              <FaBusAlt className="w-16 h-16 text-gray-900 mb-4 mx-auto" />
-              <p className="text-justify">
-                Posiadamy autokary najwyższej klasy i dbamy o to aby były one zawsze czyste i zadbane. Autokary posiadają wszelkie udogodnienia oraz wyposażone są nowoczesne
-                akcesoria tj. klimatyzację, lodówkę, barek, DVD/TV, wygodne fotele z pasami bezpieczeństwa, itd.
-              </p>
-            </div>
-
-            <div className="p-4">
-              <FaTrophy className="w-16 h-16 text-gray-900 mb-4 mx-auto" />
-              <p className="text-justify">
-                Kierowcy Kierowcy w naszej firmie to zawodowcy, którzy cechują się profesjonalizmem oraz wysoką kulturą osobistą. Gwarantujemy wysoką jakość usług, miłą atmosferę
-                oraz niską cenę wynajmu autokarów i busów. Jeżeli jeszcze nie mieliśmy przyjemności świadczyć dla Was usług, sprawdź naszą ofertę i napisz do nas.
-              </p>
-            </div>
-          </div>
-        </section>
+        <AboutUsSection />
 
         <section id="inside-photo-section">
           <StaticImage src="../images/inside.jpg" alt="Wnętrze autokaru marki Mercedes" />
