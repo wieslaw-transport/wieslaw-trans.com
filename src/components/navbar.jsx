@@ -1,13 +1,42 @@
 import React from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { clsx } from '../utils/strings';
 
-export default function Navigation() {
+export default function Navbar() {
+  const [isScrolledDown, setIsScrolledDown] = React.useState(false);
+
+  React.useEffect(() => {
+    const onScroll = () => {
+      if (
+        document.body.scrollTop > 0 ||
+        document.documentElement.scrollTop > 0
+      ) {
+        setIsScrolledDown(true);
+      } else {
+        setIsScrolledDown(false);
+      }
+    };
+    window.addEventListener('scroll', onScroll);
+
+    return () => window.removeEventListener('scroll', onScroll);
+  });
+
   return (
-    <Popover className="z-50 fixed w-inherit bg-white">
+    <Popover
+      className={clsx(
+        'z-50 fixed w-inherit bg-white',
+        isScrolledDown && 'shadow-md',
+      )}
+    >
       {({ open }) => (
         <>
-          <div className="p-4 sm:px-8 md:p-8 flex justify-between items-center">
+          <div
+            className={clsx(
+              'px-4 py-4 sm:px-8 flex justify-between items-center transition-all',
+              isScrolledDown ? 'md:py-4' : 'md:py-8',
+            )}
+          >
             <div className="h-8 md:h-12 flex justify-center items-center">
               <Logo />
             </div>

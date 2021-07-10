@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { StaticImage } from 'gatsby-plugin-image';
 
-import Navigation from '../components/navigation';
+import Navbar from '../components/navbar';
 import AboutUsSection from '../components/about-us';
 import ServicesSection from '../components/services';
 import ContactSection from '../components/contact';
@@ -19,7 +19,7 @@ export default function Home() {
         />
       </Helmet>
 
-      <Navigation />
+      <Navbar />
 
       <main
         id="start"
