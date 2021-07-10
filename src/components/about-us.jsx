@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { FaMapMarkedAlt, FaBusAlt, FaTrophy } from 'react-icons/fa';
+import theme from '../config/theme';
 import './about-us.scss';
 
 export default function AboutUs() {
@@ -15,7 +16,7 @@ export default function AboutUs() {
       <div className="max-w-screen-lg mx-auto grid lg:grid-cols-3 gap-12">
         {items.map(({ id, Icon, text }) => (
           <div key={id} className="grid-item">
-            <Icon className="w-16 h-16 text-gray-900" />
+            <Icon className={`w-16 h-16 text-${theme.primary}-600`} />
             <p className="text-justify">{text}</p>
           </div>
         ))}
