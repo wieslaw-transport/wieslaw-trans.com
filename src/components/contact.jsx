@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelopeOpenText } from 'react-icons/fa';
-import theme from '../config/theme';
 import './contact.scss';
 
 const items = [
@@ -48,9 +47,9 @@ export default function Contact() {
             key={id}
             href={url}
             {...(url.startsWith('http') ? externalLinkProps : {})}
-            className={`grid-item w-full py-2 text-gray-700 rounded-md dark:text-gray-200 hover:bg-${theme.primary}-200 dark:hover:bg-${theme.primary}-500`}
+            className={`grid-item w-full py-2 text-gray-700 rounded-md dark:text-gray-200 hover:bg-primary-200 dark:hover:bg-primary-500`}
           >
-            <Icon className={`w-5 h-5 text-${theme.primary}-600`} />
+            <Icon className={`w-5 h-5 text-primary-600`} />
             <span className="">{text}</span>
           </a>
         ))}
@@ -64,7 +63,7 @@ export default function Contact() {
             </label>
 
             <input
-              className="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
+              className="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-primary-500 dark:focus:border-primary-500 focus:outline-none focus:ring"
               type="text"
             />
           </div>
@@ -75,7 +74,7 @@ export default function Contact() {
             </label>
 
             <input
-              className="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
+              className="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-primary-500 dark:focus:border-primary-500 focus:outline-none focus:ring"
               type="email"
             />
           </div>
@@ -86,13 +85,11 @@ export default function Contact() {
             Wiadomość
           </label>
 
-          <textarea className="block w-full h-40 px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"></textarea>
+          <textarea className="block w-full h-40 px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-primary-500 dark:focus:border-primary-500 focus:outline-none focus:ring"></textarea>
         </div>
 
         <div className="flex justify-center mt-6">
-          <button
-            className={`btn-filled bg-${theme.primary}-600 hover:bg-${theme.primary}-700`}
-          >
+          <button className={`btn-filled bg-primary-600 hover:bg-primary-700`}>
             Wyślij wiadomość
           </button>
         </div>

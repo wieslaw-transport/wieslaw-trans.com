@@ -15,7 +15,7 @@ export default function Services() {
         <ul className="w-full grid gap-4 sm:grid-cols-2 mb-12">
           {items.map(text => (
             <li key={text} className="flex items-center">
-              <FaRegCheckCircle className="w-6 h-6 text-blue-500 mr-4" />
+              <FaRegCheckCircle className="w-6 h-6 text-primary-500 mr-4" />
               <p>{text}</p>
             </li>
           ))}

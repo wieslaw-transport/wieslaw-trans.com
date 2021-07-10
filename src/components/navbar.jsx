@@ -2,7 +2,6 @@ import React from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { clsx } from '../utils/strings';
-import theme from '../config/theme';
 
 export default function Navbar() {
   const [isScrolledDown, setIsScrolledDown] = React.useState(false);
@@ -58,7 +57,7 @@ export default function Navbar() {
 
             <div className="hidden md:flex items-center justify-end">
               <Link
-                className={`btn-filled bg-${theme.primary}-600 hover:bg-${theme.primary}-700`}
+                className={`btn-filled bg-primary-600 hover:bg-primary-700`}
                 to="#kontakt"
               >
                 kontakt
@@ -87,7 +86,7 @@ export default function Navbar() {
                   <NavLink to="#o-nas">o nas</NavLink>
                   <NavLink to="#uslugi">usługi</NavLink>
                   <Link
-                    className={`btn-filled bg-${theme.primary}-600 hover:bg-${theme.primary}-700`}
+                    className={`btn-filled bg-primary-600 hover:bg-primary-700`}
                     to="#kontakt"
                   >
                     kontakt
@@ -125,7 +124,7 @@ const NavLink = props => (
 
 const IconButton = ({ srLabel, Icon, ...props }) => (
   <Popover.Button
-    className="bg-white rounded-md px-2 py-1 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+    className="bg-white rounded-md px-2 py-1 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500"
     {...props}
   >
     <span className="sr-only">{srLabel}</span>
