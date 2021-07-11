@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelopeOpenText } from 'react-icons/fa';
+import Form from './form';
 import './contact.scss';
 
 const items = [
@@ -55,45 +56,7 @@ export default function Contact() {
         ))}
       </div>
 
-      <div>
-        <div className="items-center grid gap-4 md:gap-8 md:grid-flow-col">
-          <div>
-            <label className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">
-              Imię i nazwisko
-            </label>
-
-            <input
-              className="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-primary-500 dark:focus:border-primary-500 focus:outline-none focus:ring"
-              type="text"
-            />
-          </div>
-
-          <div>
-            <label className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">
-              E-mail
-            </label>
-
-            <input
-              className="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-primary-500 dark:focus:border-primary-500 focus:outline-none focus:ring"
-              type="email"
-            />
-          </div>
-        </div>
-
-        <div className="w-full mt-4">
-          <label className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">
-            Wiadomość
-          </label>
-
-          <textarea className="block w-full h-40 px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-primary-500 dark:focus:border-primary-500 focus:outline-none focus:ring"></textarea>
-        </div>
-
-        <div className="flex justify-center mt-6">
-          <button className={`btn-filled bg-primary-600 hover:bg-primary-700`}>
-            Wyślij wiadomość
-          </button>
-        </div>
-      </div>
+      <Form />
     </section>
   );
 }
