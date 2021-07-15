@@ -4,7 +4,7 @@ import './about-us.scss';
 
 export default function AboutUs() {
   return (
-    <section id="about-us" className="about-us">
+    <section id="o-nas" className="about-us">
       <div className="text-center font-display mb-8">
         <label className="text-xs font-medium uppercase opacity-60 tracking-widest mb-2.5">
           O nas

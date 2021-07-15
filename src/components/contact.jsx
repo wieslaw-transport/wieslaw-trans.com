@@ -32,7 +32,7 @@ const externalLinkProps = {
 export default function Contact() {
   return (
     <section
-      id="contact-section"
+      id="kontakt"
       className="contact-section w-full max-w-screen-md mx-auto"
     >
       <div className="text-center font-display mb-12">

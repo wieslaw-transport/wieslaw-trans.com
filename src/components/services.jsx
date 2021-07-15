@@ -3,7 +3,7 @@ import { FaRegCheckCircle } from 'react-icons/fa';
 
 export default function Services() {
   return (
-    <section id="services-section">
+    <section id="uslugi">
       <div className="max-w-screen-md mx-auto flex flex-col items-center">
         <div className="text-center font-display mb-12">
           <label className="text-xs font-medium uppercase opacity-60 tracking-widest mb-2.5">
