@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import './hero.css';
+@import './global.css';
 
 @layer components {
   .btn-filled {
